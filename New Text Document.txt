@@ -1,0 +1,12 @@
+sudo yum update -y
+sudo yum -y install docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+sudo chmod 666 /var/run/docker.sock
+docker version
+
+git init
+git add Dockerfile
+git commit -m "first commit"
+git remote add origin https://github.com/Naveencona/dockerfile.git
+git push -u origin master
